@@ -1,0 +1,118 @@
+[gd_scene load_steps=3 format=3 uid="uid://7irxaawgtt5l"]
+
+[ext_resource type="Script" path="res://Launcher.gd" id="1_3pnb1"]
+[ext_resource type="Texture2D" uid="uid://dm7sc7wyn2a0j" path="res://images/background.png" id="1_dk2ib"]
+
+[node name="Launcher" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3pnb1")
+
+[node name="BackgroundContainer" type="CenterContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.5
+anchor_right = 0.498
+anchor_bottom = 0.5
+offset_left = -573.696
+offset_top = -324.0
+offset_right = -573.696
+offset_bottom = -324.0
+
+[node name="Background" type="Sprite2D" parent="BackgroundContainer"]
+position = Vector2(-772, -407)
+scale = Vector2(1.05434, 1.05434)
+texture = ExtResource("1_dk2ib")
+centered = false
+
+[node name="UI" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="UI"]
+offset_right = 1152.0
+offset_bottom = 537.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 184
+text = "DUEL FPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomPanel" type="HBoxContainer" parent="UI"]
+offset_top = 541.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="UpdatePanel" type="PanelContainer" parent="UI/BottomPanel"]
+offset_right = 574.0
+offset_bottom = 107.0
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="UI/BottomPanel/UpdatePanel"]
+offset_right = 574.0
+offset_bottom = 107.0
+
+[node name="VersionLabel" type="Label" parent="UI/BottomPanel/UpdatePanel/VBox"]
+offset_right = 574.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 16
+text = "Not downloaded"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpdateLabel" type="Label" parent="UI/BottomPanel/UpdatePanel/VBox"]
+offset_top = 30.0
+offset_right = 574.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 16
+text = "Update available!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpdateButton" type="Button" parent="UI/BottomPanel/UpdatePanel/VBox"]
+offset_top = 60.0
+offset_right = 574.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 28
+disabled = true
+text = "UPDATE NOW"
+
+[node name="PlayPanel" type="PanelContainer" parent="UI/BottomPanel"]
+offset_left = 578.0
+offset_right = 1152.0
+offset_bottom = 107.0
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="UI/BottomPanel/PlayPanel"]
+offset_right = 574.0
+offset_bottom = 107.0
+
+[node name="PlayButton" type="Button" parent="UI/BottomPanel/PlayPanel/VBox"]
+offset_right = 574.0
+offset_bottom = 56.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 28
+disabled = true
+text = "PLAY DUEL FPS"
+
+[node name="QuitButton" type="Button" parent="UI/BottomPanel/PlayPanel/VBox"]
+offset_top = 60.0
+offset_right = 574.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 28
+text = "QUIT TO DESKTOP"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="UI/BottomPanel/UpdatePanel/VBox/UpdateButton" to="." method="_on_update_button_pressed"]
+[connection signal="pressed" from="UI/BottomPanel/PlayPanel/VBox/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="UI/BottomPanel/PlayPanel/VBox/QuitButton" to="." method="_on_quit_button_pressed"]
