@@ -99,7 +99,7 @@ func _on_pck_request_completed(result, response_code, headers, body):
   
 
 func _on_play_button_pressed():
-  OS.create_instance(["--main-pack", OS.get_user_data_dir() + "/duel-fps.pck"])
+  OS.create_instance(["--client", "--main-pack", OS.get_user_data_dir() + "/duel-fps.pck"])
   get_tree().quit()
 
 
