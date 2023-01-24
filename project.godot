@@ -19,3 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalUI="*res://dummy_scripts/global_ui.gd"
 Logger="*res://dummy_scripts/logger.gd"
+
+[editor]
+
+export/convert_text_resources_to_binary=true
