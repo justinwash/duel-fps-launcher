@@ -42,8 +42,6 @@ grow_vertical = 2
 
 [node name="TitleLabel" type="Label" parent="UI"]
 layout_mode = 2
-offset_right = 1152.0
-offset_bottom = 537.0
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 184
 text = "DUEL FPS"
@@ -52,25 +50,16 @@ vertical_alignment = 1
 
 [node name="BottomPanel" type="HBoxContainer" parent="UI"]
 layout_mode = 2
-offset_top = 541.0
-offset_right = 1152.0
-offset_bottom = 648.0
 
 [node name="UpdatePanel" type="PanelContainer" parent="UI/BottomPanel"]
 layout_mode = 2
-offset_right = 574.0
-offset_bottom = 107.0
 size_flags_horizontal = 3
 
 [node name="VBox" type="VBoxContainer" parent="UI/BottomPanel/UpdatePanel"]
 layout_mode = 2
-offset_right = 574.0
-offset_bottom = 107.0
 
 [node name="VersionLabel" type="Label" parent="UI/BottomPanel/UpdatePanel/VBox"]
 layout_mode = 2
-offset_right = 574.0
-offset_bottom = 26.0
 theme_override_font_sizes/font_size = 16
 text = "Not downloaded"
 horizontal_alignment = 1
@@ -78,9 +67,6 @@ vertical_alignment = 1
 
 [node name="UpdateLabel" type="Label" parent="UI/BottomPanel/UpdatePanel/VBox"]
 layout_mode = 2
-offset_top = 30.0
-offset_right = 574.0
-offset_bottom = 56.0
 theme_override_font_sizes/font_size = 16
 text = "Update available!"
 horizontal_alignment = 1
@@ -88,29 +74,19 @@ vertical_alignment = 1
 
 [node name="UpdateButton" type="Button" parent="UI/BottomPanel/UpdatePanel/VBox"]
 layout_mode = 2
-offset_top = 60.0
-offset_right = 574.0
-offset_bottom = 107.0
 theme_override_font_sizes/font_size = 28
 disabled = true
 text = "UPDATE NOW"
 
 [node name="PlayPanel" type="PanelContainer" parent="UI/BottomPanel"]
 layout_mode = 2
-offset_left = 578.0
-offset_right = 1152.0
-offset_bottom = 107.0
 size_flags_horizontal = 3
 
 [node name="VBox" type="VBoxContainer" parent="UI/BottomPanel/PlayPanel"]
 layout_mode = 2
-offset_right = 574.0
-offset_bottom = 107.0
 
 [node name="PlayButton" type="Button" parent="UI/BottomPanel/PlayPanel/VBox"]
 layout_mode = 2
-offset_right = 574.0
-offset_bottom = 56.0
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 28
 disabled = true
@@ -118,9 +94,6 @@ text = "PLAY DUEL FPS"
 
 [node name="QuitButton" type="Button" parent="UI/BottomPanel/PlayPanel/VBox"]
 layout_mode = 2
-offset_top = 60.0
-offset_right = 574.0
-offset_bottom = 107.0
 theme_override_font_sizes/font_size = 28
 text = "QUIT TO DESKTOP"
 
